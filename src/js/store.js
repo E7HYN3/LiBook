@@ -2,7 +2,8 @@ import { defineStore } from "pinia";
 import { ref, toRaw } from "vue";
 import { useAxios } from "@vueuse/integrations/useAxios";
 
-// Прокси сервер для обхода ошибок CORS при отправке запроса
+// Прокси сервер для обхода ошибок CORS при отправке запроса удаленному API провайдеру
+// const corsProxy = "http://localhost:8088/";
 const corsProxy = "";
 
 export const useStore = defineStore("store", () => {
@@ -18,7 +19,7 @@ export const useStore = defineStore("store", () => {
   const isFinished = ref(false);
 
   // Параметры модели
-  const host = ref("http://localhost:11434/api/chat");
+  const host = ref("https://api.airforce/v1/chat/completions");
   const API_KEY = ref("");
   const model = ref("gemma2:9b");
   const temperature = ref(0.1);
