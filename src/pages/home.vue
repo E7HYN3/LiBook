@@ -39,7 +39,11 @@ const sendRequest = async () => {
     const { data } = await store.requestToLLM()
     store.isLoading = false
     store.isFinished = true
-    store.response = data.value["choices"][0]["message"]["content"]
+    if (data.value["choices"]) {
+      store.response = data.value["choices"][0]["message"]["content"]
+    } else {
+      store.response = data.value["message"]["content"]
+    }
   } catch (error) {
     if (error.response) {
       if (error.response.status == 500) {
@@ -47,7 +51,7 @@ const sendRequest = async () => {
       } else if (error.response.status == 401) {
         f7.dialog.alert(error + "<br>" + 'Проверьте указанный API ключ.').setTitle('Ошибка запроса');
       } else {
-        f7.dialog.alert(error + "<br>" + 'Проверьте название настройки модели.').setTitle('Ошибка запроса');
+        f7.dialog.alert(error + "<br>" + 'Проверьте название в настройках модели.').setTitle('Ошибка запроса');
 
       }
     } else {
