@@ -19,7 +19,7 @@ export const useStore = defineStore("store", () => {
   const isFinished = ref(false);
 
   // Параметры модели
-  const host = ref("https://api.airforce/v1/chat/completions");
+  const host = ref("http://localhost:11434/api/chat");
   const API_KEY = ref("");
   const model = ref("gemma2:9b");
   const temperature = ref(0.1);
