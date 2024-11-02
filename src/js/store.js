@@ -2,8 +2,8 @@ import { defineStore } from "pinia";
 import { ref, toRaw } from "vue";
 import { useAxios } from "@vueuse/integrations/useAxios";
 
-// Прокси сервер для обхода ошибок CORS при отправке запроса удаленному API провайдеру
-// const corsProxy = "http://localhost:8088/";
+// Прокси сервер для обхода ошибок CORS при отправке запроса
+// const corsProxy = "http://localhost:3000/";
 const corsProxy = "https://chestnut-orchid-alloy.glitch.me/";
 
 export const useStore = defineStore(
