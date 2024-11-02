@@ -3,11 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "description": "Libook",
-  "repository": "",
-  "license": "UNLICENSED",
+  "repository": "https://github.com/E7HYN3/sirius_ai2024",
+  "license": " Apache-2.0 license",
   "scripts": {
     "start": "npm run dev",
     "dev": "cross-env NODE_ENV=development vite",
+    "proxy": "node proxy.js",
     "build": "cross-env NODE_ENV=production vite build",
     "build-capacitor-ios": "cross-env NODE_ENV=production vite build && npx cap copy ios",
     "build-capacitor-android": "cross-env NODE_ENV=production vite build && npx cap copy android",
@@ -40,6 +41,7 @@
     "http-proxy-middleware": "^3.0.3",
     "material-icons": "^1.13.12",
     "pinia": "^2.2.5",
+    "pinia-plugin-persistedstate": "^4.1.2",
     "skeleton-elements": "^4.0.1",
     "swiper": "^11.1.14",
     "vue": "^3.5.12"

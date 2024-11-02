@@ -11,7 +11,7 @@
     <!-- Page content-->
     <f7-list strong-ios dividers-ios outline-ios>
       <f7-list-input type="textarea" resizable maxlength="1000" label="Текст для сжатия"
-        :info="`Использовано символов: ${store.text.length}/1000`" placeholder="Введите текст"
+        :info="`Использовано символов: ${store.text.length}/1000`" clear-button placeholder="Введите текст"
         v-model:value="store.text"></f7-list-input>
       <f7-list-input v-model:value="store.summarySize" label="Степень сжатия" type="select">
         <option>Сильное сжатие</option>

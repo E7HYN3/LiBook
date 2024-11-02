@@ -1,6 +1,8 @@
 // Import Vue
 import { createApp } from "vue";
 import { createPinia } from "pinia";
+// save to localstorage
+import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
 // Import Framework7
 import Framework7 from "framework7/lite-bundle";
 
@@ -23,6 +25,8 @@ Framework7.use(Framework7Vue);
 // Init App
 
 const pinia = createPinia();
+pinia.use(piniaPluginPersistedstate);
+
 const app = createApp(App);
 
 // Register Framework7 Vue components
