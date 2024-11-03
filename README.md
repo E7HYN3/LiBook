@@ -1,37 +1,5 @@
 # Libook
-
-## Framework7 CLI Options
-
-Framework7 app created with following options:
-
-```
-{
-  "cwd": "/home/q/sirius_ai2024",
-  "type": [
-    "web",
-    "capacitor"
-  ],
-  "name": "Libook",
-  "framework": "vue",
-  "template": "tabs",
-  "bundler": "vite",
-  "cssPreProcessor": "less",
-  "theming": {
-    "customColor": true,
-    "color": "#456ed8",
-    "darkMode": false,
-    "iconFonts": true
-  },
-  "customBuild": false,
-  "pkg": "ai.Libook.sirius",
-  "capacitor": {
-    "platforms": [
-      "ios",
-      "android"
-    ]
-  }
-}
-```
+Прототип приложения для сжатия файлов и текстов при помощи LLM
 
 ## Install Dependencies
 
